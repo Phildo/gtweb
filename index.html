@@ -1,0 +1,131 @@
+<html>
+<head>
+<style>
+body
+{
+  font-family:Arial;
+}
+tr,td
+{
+  padding:10px;
+}
+</style>
+</head>
+<body>
+Gnome Tower<br />
+<br />
+<a href="zips/gnometower-0.0.1.zip">Download 0.0.1 (Windows & Quest)</a> <br />
+<a href="zips/gnometower-0.0.2.zip">Download 0.0.2 (Windows & Quest)</a> <br />
+<a href="zips/gnometower-0.0.3.zip">Download 0.0.3 (Windows & Quest)</a> <br />
+<a href="zips/gnometower-0.0.4.zip">Download 0.0.4 (Windows [Quest Broken])</a> <br />
+<a href="zips/gnometower-0.0.5.zip">Download 0.0.5 (Windows [Quest Broken])</a> <br />
+<a href="zips/gnometower-0.0.6.zip">Download 0.0.6 (Windows [Quest Buggy])</a> <a href="https://www.youtube.com/watch?v=j8zlMKM0R1A">Overview</a> [latest] <br />
+<br />
+Some redistributibles you might need to install (normally, Steam would take care of this for you):<br />
+<a href="https://support.microsoft.com/en-us/help/2977003/the-latest-supported-visual-c-downloads">MSVC++</a> (you'll likely need vc_redist.x64.exe)<br />
+<a href="http://openal.org/downloads/">OpenAL</a> (the Windows installer, not the SDK)<br />
+<br />
+Notes:<br />
+Thank you for trying out <b>Gnome Tower</b>! The current version is likely buggy, and not very user friendly. If you have problems, find bugs, or would just like to check out the latest happenings, you can check out our <a href="https://discord.gg/sKVrUPgw">Discord channel</a>.
+<br />
+<br />
+To <b>play solo</b> (PCVR):<br />
+- Double click gnomes-pcclient-server.exe<br />
+- Hit "host local world"<br />
+- It will begin a session using the included "gnome.world" as a save<br />
+- If no "gnome.world" present, it will create one<br />
+<br />
+To <b>host a server</b> (PCVR):<br />
+- Enable port forwarding on your router<br />
+- Forward port 54000 (default) to your PC<br />
+- Follow above instructions to play along OR run gnomes_pcserver.exe for standalone server<br />
+<br />
+To <b>join a server</b> (PCVR):<br />
+- Either run gnomes-pcclient-server.exe OR gnomes-pcclient.exe<br />
+- Hit "Join world"<br />
+- Type in server IP address and port, separated by a colon (something like 68.112.183.12:54000)<br />
+- Hit the right arrow to attempt a connection<br />
+<br />
+To <b>join a server</b> (Quest- cannot act as host!):<br />
+- "Side load" gnometower-release.apk onto your quest<br />
+- follow "join a server PCVR" instructions<br />
+<br />
+<br />
+<b>HOW TO PLAY:</b><br />
+- <b>Movement:</b><br />
+- - Forward/Backward on either joystick will hop your character forward or back<br />
+- - Left/Right will snap turn<br />
+- - Grip anywhere to pull yourself around<br />
+- - Grip with two hands to 1. set pivot, and 2. rotate around that pivot (MUST BE ENABLED IN SETTINGS)<br />
+- <b>Placement:</b><br />
+- - Selection (Default):<br />
+- - - Hold trigger on one controller to preview a single voxel placement; release to place<br />
+- - - Hold trigger on both controllers to preview a selection range; release to place entire range<br />
+- - - B cancels selection preview<br />
+- - Paint:<br />
+- - - While holding trigger on either controller, it will continuously place voxels at that position<br />
+- - Mask:<br />
+- - - The first option ("over") will place blocks wherever specified<br />
+- - - The second option ("outside") will place blocks only where no block exists<br />
+- - - The third option ("inside") will overwrite blocks only where a block already exists<br />
+- - B toggles between place and delete<br />
+- <b>Menu:</b><br />
+- - [The current menu is extremely crude, using "o" to denote a checkbox, and "x" to denote an option]<br />
+- - Hold A to show menu<br />
+- - Use other hand's beam to select options<br />
+<br />
+<br />
+Download Contents:
+<table>
+<tr> <td>gnomes-pcserver.exe</td>        <td>Server, runnable on PC only. Default port is 54000. Can run from command line as `path\to\gnomes-pcserver.exe 1234` to (eg) set the port to 1234</td></tr>
+<tr> <td>gnomes-pcclient.exe</td>        <td>PCVR. Uses OpenXR and Vulkan. Requires SteamVR beta branch for OpenXR support (Oculus should be fine).<br />[ REQUIRES RUNNING gnomes-pcserver.exe INSTANCE TO CONNECT TO ]</td></tr>
+<tr> <td>gnomes-pcclient-server.exe</td> <td>Combined for standalone PCVR. Other clients can join this just like standalone server.<br />[ USE THIS TO CLICK AND PLAY ]</td></tr>
+<tr> <td>gnometower-release.apk</td>     <td>Quest version.<br />[ REQUIRES RUNNING gnomes-pcserver.exe INSTANCE TO CONNECT TO ]</td></tr>
+<tr> <td>resources</td>                  <td>Game assets. Run PCVR at the same folder heirarchy as this folder (should be fine to run from unzipped structure).</td> </tr>
+<tr> <td>gnome.world</td>                <td>World save file. Server saves world on close window.</td> </tr>
+</table>
+
+<br />
+<br />
+Gnown Bugs:<br />
+- Menus are so illegible as to be considered a bug<br />
+- Initial menu shows "Host a Server" even if playing a version without server enabled (Quest, gnomes_pcclient.exe).<br />
+- Quest "Y" button, crashes the game, grip buttons are ignored (This is a problem in Facebook's OpenXR implementation)<br />
+- Quest all around buggy<br />
+<br />
+<br />
+ChangeLog:<br />
+<br />0.0.6:<br />
+- realtime voxel edits<br />
+- very basic menu system<br />
+- settings menu<br />
+- "paint" and "select" modes<br />
+- "over", "outside", and "inside" mask modes<br />
+- ability to rotate on a pivot<br />
+- large performance gains<br />
+<br />
+<br />0.0.5:<br />
+- fixes subtle driver bugs<br />
+- slight performance increase<br />
+<br />0.0.4:<br />
+- mobs! pigs birds and gnomes, oh my!<br />
+- grab and pull<br />
+- voxel preview<br />
+- HUGE performance gains<br />
+- small bugfixes<br />
+<br />0.0.3:<br />
+- fixes requirement for debug .dlls<br />
+- transparent voxels<br />
+- animated voxels<br />
+- selection reticle<br />
+<br />0.0.2:<br />
+- textured voxels<br />
+- chunk loading<br />
+- ip selector<br />
+<br />0.0.1:<br />
+- multiplayer voxel editor<br />
+- hardcoded IP<br />
+
+</body>
+
+</html>
