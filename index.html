@@ -22,7 +22,10 @@ Gnome Tower<br />
 <a href="zips/gnometower-0.0.6.zip">Download 0.0.6 (Windows [Quest Buggy])</a> <a href="https://www.youtube.com/watch?v=j8zlMKM0R1A">Overview</a> <br />
 <a href="zips/gnometower-0.0.7.zip">Download 0.0.7 (Windows [Quest Broken])</a> <br />
 <a href="zips/gnometower-0.0.8.zip">Download 0.0.8 (Windows & Quest)</a> <br />
-<a href="zips/gnometower-0.0.9.zip">Download 0.0.9 (Windows & Quest & Pancake)</a>  <a href="https://www.youtube.com/watch?v=T1lvoCmGALk">Overview</a> [latest] <br />
+<a href="zips/gnometower-0.0.9.zip">Download 0.0.9 (Windows & Quest & Pancake)</a>  <a href="https://www.youtube.com/watch?v=T1lvoCmGALk">Overview</a> <br />
+<a href="zips/gnometower-0.0.10.zip">Download 0.0.10 (Windows & Quest & Pancake)</a>  <a href="https://www.youtube.com/watch?v=UtcCFxi_Uig">Overview</a> <br />
+<a href="zips/gnometower-0.0.11.zip">Download 0.0.11 (Windows & Quest & Pancake)</a> <br />
+<a href="zips/gnometower-0.0.12.zip">Download 0.0.12 (Windows & Quest & Pancake)</a> [latest] <br />
 <br />
 Some redistributibles you might need to install (normally, Steam would take care of this for you):<br />
 <a href="https://support.microsoft.com/en-us/help/2977003/the-latest-supported-visual-c-downloads">MSVC++</a> (you'll likely need vc_redist.x64.exe)<br />
@@ -64,7 +67,13 @@ To <b>join a server</b> (Quest- cannot act as host!):<br />
 - - Selection (Default):<br />
 - - - Use trigger on gnomes, drag and release in another location, to command them to path (for fun/debugging)<br />
 - - Hand:<br />
-- - - Use trigger to grab mobs
+- - - Use trigger to grab mobs<br />
+- - ? Gnome:<br />
+- - - Tell gnomes to reconsider current jobs (necessary when something fails to be built)<br />
+- - box Gnome:<br />
+- - - Set volume to instruct gnomes to build<br />
+- - explode Gnome:<br />
+- - - Set volume to instruct gnomes to destroy<br />
 - - Volume:<br />
 - - - Hold trigger on one controller to preview a single voxel placement; release to place<br />
 - - - Hold trigger on both controllers to preview a selection range; release to place entire range<br />
@@ -75,6 +84,8 @@ To <b>join a server</b> (Quest- cannot act as host!):<br />
 - - - The first option ("add") will place blocks only where no block exists<br />
 - - - The first option ("set") will place blocks wherever specified (overwrites existing blocks)<br />
 - - - The third option ("modify") will overwrite blocks only where a block already exists<br />
+- - Size:<br />
+- - - paintbrush size<br />
 - - B toggles between place and delete<br />
 - <b>Menu:</b><br />
 - - Hold A to show menu<br />
@@ -84,7 +95,7 @@ To <b>join a server</b> (Quest- cannot act as host!):<br />
 Download Contents:
 <table>
 <tr> <td>gnomes-pcserver.exe</td>             <td>Server, runnable on PC only. Default port is 54000. Can run from command line as `path\to\gnomes-pcserver.exe 1234` to (eg) set the port to 1234</td></tr>
-<tr> <td>gnomes-pcclient.exe</td>             <td>PCVR. Uses OpenXR and Vulkan. Requires SteamVR beta branch for OpenXR support (Oculus should be fine).<br />[ REQUIRES RUNNING gnomes-pcserver.exe INSTANCE TO CONNECT TO ]</td></tr>
+<tr> <td>gnomes-pcclient.exe</td>             <td>PCVR. Uses OpenXR and Vulkan. <br />[ REQUIRES RUNNING gnomes-pcserver.exe INSTANCE TO CONNECT TO ]</td></tr>
 <tr> <td>gnomes-pcclient-server.exe</td>      <td>Combined for standalone PCVR. Other clients can join this just like standalone server.<br />[ USE THIS TO CLICK AND PLAY ]</td></tr>
 <tr> <td>gnomes-pcclient-server-novr.exe</td> <td>Demo for non-VR to just quickly see visuals</td></tr>
 <tr> <td>gnometower-release.apk</td>          <td>Quest version.<br />[ REQUIRES RUNNING gnomes-pcserver.exe INSTANCE TO CONNECT TO ]</td></tr>
@@ -95,15 +106,31 @@ Download Contents:
 <br />
 <br />
 Gnown Bugs:<br />
-- Initial menu shows "Host a Server" even if playing a version without server enabled (Quest, gnomes_pcclient.exe).<br />
-- Even if you've joined an external server, the menu says "save and quit" and "quit without saving" (both are identical in this case)<br />
-- Quest "Y" button, crashes the game, grip buttons are ignored (This is a problem in Facebook's OpenXR implementation)<br />
-- Quest all around buggy<br />
-- Day/night lighting is really obnoxious<br />
-- Oculus PC runtime requires FrameSync<br />
+- Quest "Y" button, crashes the game<br />
+- Quest doesn't display command blocks<br />
+- Oculus PC runtime requires forceFrameSync 1 (settings.txt)<br />
 <br />
 <br />
 ChangeLog:<br />
+<br />0.0.12:<br />
+- scale modifier<br />
+- bug fixes<br />
+<br />
+<br />0.0.11:<br />
+- significant performance increases<br />
+- stars<br />
+- debug tooling and longer term restructuring<br />
+- bug fixes<br />
+<br />
+<br />0.0.10:<br />
+- rudimentary gnome building commands<br />
+- brush sizes<br />
+- realtime loading performance increases<br />
+- realtime edits performance increases<br />
+- particles/audio/haptics<br />
+- significant world compression<br />
+- tons of minor changes<br />
+<br />
 <br />0.0.9:<br />
 - Workaround for oculus PC runtime bug<br />
 - text file IP definition<br />
