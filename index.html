@@ -25,7 +25,8 @@ Gnome Tower<br />
 <a href="zips/gnometower-0.0.9.zip">Download 0.0.9 (Windows & Quest & Pancake)</a>  <a href="https://www.youtube.com/watch?v=T1lvoCmGALk">Overview</a> <br />
 <a href="zips/gnometower-0.0.10.zip">Download 0.0.10 (Windows & Quest & Pancake)</a>  <a href="https://www.youtube.com/watch?v=UtcCFxi_Uig">Overview</a> <br />
 <a href="zips/gnometower-0.0.11.zip">Download 0.0.11 (Windows & Quest & Pancake)</a> <br />
-<a href="zips/gnometower-0.0.12.zip">Download 0.0.12 (Windows & Quest & Pancake)</a> [latest] <br />
+<a href="zips/gnometower-0.0.12.zip">Download 0.0.12 (Windows & Quest & Pancake)</a> <br />
+<a href="zips/gnometower-0.0.13.zip">Download 0.0.13 (Windows & Quest & Pancake)</a> [latest] <br />
 <br />
 Some redistributibles you might need to install (normally, Steam would take care of this for you):<br />
 <a href="https://support.microsoft.com/en-us/help/2977003/the-latest-supported-visual-c-downloads">MSVC++</a> (you'll likely need vc_redist.x64.exe)<br />
@@ -38,8 +39,8 @@ Thank you for trying out <b>Gnome Tower</b>! The current version is likely buggy
 To <b>play solo</b> (PCVR):<br />
 - Double click gnomes-pcclient-server.exe<br />
 - Hit "host local world"<br />
-- It will begin a session using the included "gnome.world" as a save<br />
-- If no "gnome.world" present, it will create one<br />
+- It will begin a session using the included "save0" as a save<br />
+- If no "save0" present, it will create one<br />
 <br />
 To <b>host a server</b> (PCVR):<br />
 - Enable port forwarding on your router<br />
@@ -71,9 +72,9 @@ To <b>join a server</b> (Quest- cannot act as host!):<br />
 - - ? Gnome:<br />
 - - - Tell gnomes to reconsider current jobs (necessary when something fails to be built)<br />
 - - box Gnome:<br />
-- - - Set volume to instruct gnomes to build<br />
+- - - Set volume to instruct gnomes to build [b toggles set/clear command]<br />
 - - explode Gnome:<br />
-- - - Set volume to instruct gnomes to destroy<br />
+- - - Set volume to instruct gnomes to destroy [b toggles set/clear command]<br />
 - - Volume:<br />
 - - - Hold trigger on one controller to preview a single voxel placement; release to place<br />
 - - - Hold trigger on both controllers to preview a selection range; release to place entire range<br />
@@ -100,18 +101,21 @@ Download Contents:
 <tr> <td>gnomes-pcclient-server-novr.exe</td> <td>Demo for non-VR to just quickly see visuals</td></tr>
 <tr> <td>gnometower-release.apk</td>          <td>Quest version.<br />[ REQUIRES RUNNING gnomes-pcserver.exe INSTANCE TO CONNECT TO ]</td></tr>
 <tr> <td>resources</td>                       <td>Game assets. Run PCVR at the same folder heirarchy as this folder (should be fine to run from unzipped structure).</td> </tr>
-<tr> <td>gnome.world</td>                     <td>World save file. Server saves world on close window.</td> </tr>
+<tr> <td>save0</td>                           <td>World save file. Server saves world on close window.</td> </tr>
 </table>
 
 <br />
 <br />
 Gnown Bugs:<br />
-- Quest "Y" button, crashes the game<br />
-- Quest doesn't display command blocks<br />
 - Oculus PC runtime requires forceFrameSync 1 (settings.txt)<br />
 <br />
 <br />
 ChangeLog:<br />
+<br />0.0.13:<br />
+- bug fixes<br />
+- debugging infrastructure<br />
+- working quest build<br />
+<br />
 <br />0.0.12:<br />
 - scale modifier<br />
 - bug fixes<br />
