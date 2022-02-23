@@ -13,7 +13,7 @@ tr,td
 </head>
 <body>
 Gnome Tower<br />
-<br />
+<img src="assets/gnometower.png" style="display:block; margin:10px auto; width:100%;" > </img>
 <a href="zips/gnometower-0.0.1.zip">Download 0.0.1 (Windows & Quest)</a> <br />
 <a href="zips/gnometower-0.0.2.zip">Download 0.0.2 (Windows & Quest)</a> <br />
 <a href="zips/gnometower-0.0.3.zip">Download 0.0.3 (Windows & Quest)</a> <br />
@@ -22,11 +22,16 @@ Gnome Tower<br />
 <a href="zips/gnometower-0.0.6.zip">Download 0.0.6 (Windows [Quest Buggy])</a> <a href="https://www.youtube.com/watch?v=j8zlMKM0R1A">Overview</a> <br />
 <a href="zips/gnometower-0.0.7.zip">Download 0.0.7 (Windows [Quest Broken])</a> <br />
 <a href="zips/gnometower-0.0.8.zip">Download 0.0.8 (Windows & Quest)</a> <br />
-<a href="zips/gnometower-0.0.9.zip">Download 0.0.9 (Windows & Quest & Pancake)</a>  <a href="https://www.youtube.com/watch?v=T1lvoCmGALk">Overview</a> <br />
-<a href="zips/gnometower-0.0.10.zip">Download 0.0.10 (Windows & Quest & Pancake)</a>  <a href="https://www.youtube.com/watch?v=UtcCFxi_Uig">Overview</a> <br />
-<a href="zips/gnometower-0.0.11.zip">Download 0.0.11 (Windows & Quest & Pancake)</a> <br />
-<a href="zips/gnometower-0.0.12.zip">Download 0.0.12 (Windows & Quest & Pancake)</a> <br />
-<a href="zips/gnometower-0.0.13.zip">Download 0.0.13 (Windows & Quest & Pancake)</a> [latest] <br />
+<a href="zips/gnometower-0.0.9.zip">Download 0.0.9 (Windows & Quest & [demo]Pancake)</a>  <a href="https://www.youtube.com/watch?v=T1lvoCmGALk">Overview</a> <br />
+<a href="zips/gnometower-0.0.10.zip">Download 0.0.10 (Windows & Quest & [demo]Pancake)</a>  <a href="https://www.youtube.com/watch?v=UtcCFxi_Uig">Overview</a> <br />
+<a href="zips/gnometower-0.0.11.zip">Download 0.0.11 (Windows & Quest & [demo]Pancake)</a> <br />
+<a href="zips/gnometower-0.0.12.zip">Download 0.0.12 (Windows & Quest & [demo]Pancake)</a> <br />
+<a href="zips/gnometower-0.0.13.zip">Download 0.0.13 (Windows & Quest & [demo]Pancake)</a> <br />
+<a href="zips/gnometower-0.0.14.zip">Download 0.0.14 (Windows & Quest & [demo]Pancake)</a> <a href="https://www.youtube.com/watch?v=AzvYfkyuA4w">Overview</a> <br />
+<a href="zips/gnometower-0.0.15.zip">Download 0.0.15 (Windows & Quest)</a> <br />
+<a href="zips/gnometower-0.0.16.zip">Download 0.0.16 (Windows)</a> <br />
+<a href="zips/gnometower-0.0.17.zip">Download 0.0.17 (Windows & Quest)</a> <br />
+<a href="zips/gnometower-0.0.18.zip">Download 0.0.18 (Windows & Quest)</a> [latest] <br />
 <br />
 Some redistributibles you might need to install (normally, Steam would take care of this for you):<br />
 <a href="https://support.microsoft.com/en-us/help/2977003/the-latest-supported-visual-c-downloads">MSVC++</a> (you'll likely need vc_redist.x64.exe)<br />
@@ -37,8 +42,8 @@ Thank you for trying out <b>Gnome Tower</b>! The current version is likely buggy
 <br />
 <br />
 To <b>play solo</b> (PCVR):<br />
-- Double click gnomes-pcclient-server.exe<br />
-- Hit "host local world"<br />
+- Run gnomes.exe<br />
+- Hit "host local world" (if it doesn't automatically)<br />
 - It will begin a session using the included "save0" as a save<br />
 - If no "save0" present, it will create one<br />
 <br />
@@ -48,7 +53,7 @@ To <b>host a server</b> (PCVR):<br />
 - Follow "play solo" instructions to play alongside your server, OR instead run gnomes_pcserver.exe for standalone server<br />
 <br />
 To <b>join a server</b> (PCVR):<br />
-- Either run gnomes-pcclient-server.exe OR gnomes-pcclient.exe<br />
+- Run gnomes.exe<br />
 - Hit "Join world"<br />
 - Type in server IP address and port, separated by a colon (something like 68.112.183.12:54000)<br />
 - Hit the right arrow to attempt a connection<br />
@@ -95,22 +100,51 @@ To <b>join a server</b> (Quest- cannot act as host!):<br />
 <br />
 Download Contents:
 <table>
-<tr> <td>gnomes-pcserver.exe</td>             <td>Server, runnable on PC only. Default port is 54000. Can run from command line as `path\to\gnomes-pcserver.exe 1234` to (eg) set the port to 1234</td></tr>
-<tr> <td>gnomes-pcclient.exe</td>             <td>PCVR. Uses OpenXR and Vulkan. <br />[ REQUIRES RUNNING gnomes-pcserver.exe INSTANCE TO CONNECT TO ]</td></tr>
-<tr> <td>gnomes-pcclient-server.exe</td>      <td>Combined for standalone PCVR. Other clients can join this just like standalone server.<br />[ USE THIS TO CLICK AND PLAY ]</td></tr>
-<tr> <td>gnomes-pcclient-server-novr.exe</td> <td>Demo for non-VR to just quickly see visuals</td></tr>
-<tr> <td>gnometower-release.apk</td>          <td>Quest version.<br />[ REQUIRES RUNNING gnomes-pcserver.exe INSTANCE TO CONNECT TO ]</td></tr>
-<tr> <td>resources</td>                       <td>Game assets. Run PCVR at the same folder heirarchy as this folder (should be fine to run from unzipped structure).</td> </tr>
-<tr> <td>save0</td>                           <td>World save file. Server saves world on close window.</td> </tr>
+<tr> <td>gnomes.exe</td>             <td>Combined client/server for standalone PCVR (Windows SteamVR or Oculus runtime). Other clients can join this just like standalone server.<br />[ USE THIS TO CLICK AND PLAY ]</td></tr>
+<tr> <td>gnomes-server.exe</td>      <td>Standalone Server (Windows PC only). Default port is 54000. Can run from command line as `path\to\gnomes-server.exe 1234` to (eg) set the port to 1234</td></tr>
+<tr> <td>gnometower-release.apk</td> <td>Quest version.<br />[ REQUIRES RUNNING gnomes.exe or gnomes-server.exe INSTANCE TO CONNECT TO ]</td></tr>
+<tr> <td>resources</td>              <td>Game assets. Run PCVR at the same folder heirarchy as this folder (should be fine to run from unzipped structure).</td> </tr>
+<tr> <td>save0</td>                  <td>World save file. Server saves world on close window.</td> </tr>
+<tr> <td>settings.txt</td>           <td>Game settings. Set "forceFrameSync 1" if using the oculus PCVR runtime.</td> </tr>
 </table>
 
 <br />
 <br />
 Gnown Bugs:<br />
 - Oculus PC runtime requires forceFrameSync 1 (settings.txt)<br />
+- standalone server says "(Not Responding)" even though it is<br />
 <br />
 <br />
 ChangeLog:<br />
+<br />0.0.18:<br />
+- massive code reorg<br />
+- generalized edits into categories<br />
+- menu overhaul<br />
+- can command stroke<br />
+- movement qols<br />
+- bug fixes + perf gains<br />
+<br />
+<br />0.0.17:<br />
+- bug fixes<br />
+- big performance gains<br />
+- preparation for objs<br />
+<br />
+<br />0.0.16:<br />
+- bug fixes<br />
+- bigger view distance<br />
+- mobs everywhere<br />
+<br />
+<br />0.0.15:<br />
+- bug fixes<br />
+- procgen terrain<br />
+- clouds<br />
+- multiplayer heads<br />
+<br />
+<br />0.0.14:<br />
+- bug fixes<br />
+- debugging infrastructure<br />
+- beginnings of procgen<br />
+<br />
 <br />0.0.13:<br />
 - bug fixes<br />
 - debugging infrastructure<br />
