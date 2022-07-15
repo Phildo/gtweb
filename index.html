@@ -4,6 +4,32 @@
 body
 {
   font-family:Arial;
+  background-image:url("assets/gnometower.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+.content
+{
+  border-radius: 25px;
+  color:white;
+  background-color:rgba(0,0,0,0.6);
+  padding:20px;
+  margin:20px;
+}
+.changelog
+{
+  border-radius: 25px;
+  height: 440px;
+  padding:20px;
+  margin:20px;
+  background-color:rgba(0,0,0,0.6);
+  overflow-y: auto;
+}
+a
+{
+  color:rgba(200,80,80,1.0);
+  font-weight:bold;
 }
 tr,td
 {
@@ -12,8 +38,9 @@ tr,td
 </style>
 </head>
 <body>
-Gnome Tower<br />
-<img src="assets/gnometower.png" style="display:block; margin:10px auto; width:100%;" > </img>
+<div class="content">
+<h1> Gnome Tower</h1>
+<!--
 <a href="zips/gnometower-0.0.1.zip">Download 0.0.1 (Windows & Quest)</a> <br />
 <a href="zips/gnometower-0.0.2.zip">Download 0.0.2 (Windows & Quest)</a> <br />
 <a href="zips/gnometower-0.0.3.zip">Download 0.0.3 (Windows & Quest)</a> <br />
@@ -31,91 +58,113 @@ Gnome Tower<br />
 <a href="zips/gnometower-0.0.15.zip">Download 0.0.15 (Windows & Quest)</a> <br />
 <a href="zips/gnometower-0.0.16.zip">Download 0.0.16 (Windows)</a> <br />
 <a href="zips/gnometower-0.0.17.zip">Download 0.0.17 (Windows & Quest)</a> <br />
-<a href="zips/gnometower-0.0.18.zip">Download 0.0.18 (Windows & Quest)</a> [latest] <br />
+<a href="zips/gnometower-0.0.18.zip">Download 0.0.18 (Windows & Quest)</a> <br />
+<a href="zips/gnometower-0.0.19.zip">Download 0.0.19 (Windows & Quest)</a> <br />
+<a href="zips/gnometower-0.0.20.zip">Download 0.0.20 (Windows & Quest)</a> <br />
+<a href="zips/gnometower-0.0.21.zip">Download 0.0.21 (Windows & Quest)</a> <br />
+<a href="zips/gnometower-0.0.22.zip">Download 0.0.22 (Windows & Quest)</a> <br />
+<a href="zips/gnometower-0.0.23.zip">Download 0.0.23 (Windows & Quest)</a> <br />
+<a href="zips/gnometower-0.0.24.zip">Download 0.0.24 (Windows & Quest)</a> <br />
+<a href="zips/gnometower-0.0.25.zip">Download 0.0.25 (Windows & Quest)</a> <br />
+<a href="zips/gnometower-0.0.26.zip">Download 0.0.26 (Windows & Quest)</a> <br />
+-->
+<a href="zips/gnometower-0.0.27.zip">
+<img src="assets/gnome.png" style="height:100px;"/><br />
+Download 0.0.27 (Windows & Quest)
+</a> <br />
 <br />
+If it isn't already installed on your computer, you might need to additionally download the following MSVC++ redistributible:<br />
+<a href="https://support.microsoft.com/en-us/help/2977003/the-latest-supported-visual-c-downloads">MSVC++</a> (you'll likely need vc_redist.x64.exe)<br />
+<!--
 Some redistributibles you might need to install (normally, Steam would take care of this for you):<br />
 <a href="https://support.microsoft.com/en-us/help/2977003/the-latest-supported-visual-c-downloads">MSVC++</a> (you'll likely need vc_redist.x64.exe)<br />
 <a href="http://openal.org/downloads/">OpenAL</a> (the Windows installer, not the SDK)<br />
+-->
 <br />
-Notes:<br />
-Thank you for trying out <b>Gnome Tower</b>! The current version is likely buggy, and not very user friendly. If you have problems, find bugs, or would just like to check out the latest happenings, you can check out our <a href="https://discord.gg/sKVrUPgw">Discord channel</a>.
+<!--
+Check out our <a href="https://discord.gg/sKVrUPgw">Discord channel</a>.
+-->
 <br />
 <br />
-To <b>play solo</b> (PCVR):<br />
-- Run gnomes.exe<br />
-- Hit "host local world" (if it doesn't automatically)<br />
-- It will begin a session using the included "save0" as a save<br />
-- If no "save0" present, it will create one<br />
-<br />
-To <b>host a server</b> (PCVR):<br />
+To <b>host a server</b> (Windows):<br />
 - Enable port forwarding on your router<br />
-- Forward port 54000 (default) to your PC<br />
-- Follow "play solo" instructions to play alongside your server, OR instead run gnomes_pcserver.exe for standalone server<br />
+- Forward port 54000 (default) to your PC's local IP address<br />
+- Hit "Host Game" in gnomes.exe OR run gnome_server.exe<br />
 <br />
-To <b>join a server</b> (PCVR):<br />
-- Run gnomes.exe<br />
-- Hit "Join world"<br />
-- Type in server IP address and port, separated by a colon (something like 68.112.183.12:54000)<br />
-- Hit the right arrow to attempt a connection<br />
-<br />
-To <b>join a server</b> (Quest- cannot act as host!):<br />
-- "Side load" gnometower-release.apk onto your quest<br />
-- follow "join a server PCVR" instructions<br />
+To play <b>quest native</b> (Quest- cannot act as host!):<br />
+- "Side load" gnometower-release.apk onto your quest (using adb or sidequest)<br />
+- Run gnome_server.exe on your PC<br />
+- Connect to your PC's local IP address (and port 54000 if using default)<br />
+- Warning: the quest version is in-progress, and may suffer performance issues<br />
 <br />
 <br />
-<b>HOW TO PLAY:</b><br />
-- <b>Movement:</b><br />
-- - Forward/Backward on either joystick will hop your character forward or back<br />
-- - Left/Right will snap turn<br />
-- - Grip anywhere to pull yourself around<br />
-- - Grip with two hands to 1. set pivot, and 2. rotate around that pivot (MUST BE ENABLED IN SETTINGS)<br />
-- <b>Placement:</b><br />
-- - Selection (Default):<br />
-- - - Use trigger on gnomes, drag and release in another location, to command them to path (for fun/debugging)<br />
-- - Hand:<br />
-- - - Use trigger to grab mobs<br />
-- - ? Gnome:<br />
-- - - Tell gnomes to reconsider current jobs (necessary when something fails to be built)<br />
-- - box Gnome:<br />
-- - - Set volume to instruct gnomes to build [b toggles set/clear command]<br />
-- - explode Gnome:<br />
-- - - Set volume to instruct gnomes to destroy [b toggles set/clear command]<br />
-- - Volume:<br />
-- - - Hold trigger on one controller to preview a single voxel placement; release to place<br />
-- - - Hold trigger on both controllers to preview a selection range; release to place entire range<br />
-- - - B cancels selection preview<br />
-- - Paint:<br />
-- - - While holding trigger on either controller, it will continuously place voxels at that position<br />
-- - Mask:<br />
-- - - The first option ("add") will place blocks only where no block exists<br />
-- - - The first option ("set") will place blocks wherever specified (overwrites existing blocks)<br />
-- - - The third option ("modify") will overwrite blocks only where a block already exists<br />
-- - Size:<br />
-- - - paintbrush size<br />
-- - B toggles between place and delete<br />
-- <b>Menu:</b><br />
-- - Hold A to show menu<br />
-- - Use other hand's beam to select options<br />
-<br />
-<br />
+<!--
 Download Contents:
 <table>
 <tr> <td>gnomes.exe</td>             <td>Combined client/server for standalone PCVR (Windows SteamVR or Oculus runtime). Other clients can join this just like standalone server.<br />[ USE THIS TO CLICK AND PLAY ]</td></tr>
-<tr> <td>gnomes-server.exe</td>      <td>Standalone Server (Windows PC only). Default port is 54000. Can run from command line as `path\to\gnomes-server.exe 1234` to (eg) set the port to 1234</td></tr>
+<tr> <td>gnomes_server.exe</td>      <td>Standalone Server (Windows PC only). Default port is 54000. Can run from command line as `path\to\gnomes-server.exe 1234` to (eg) set the port to 1234</td></tr>
 <tr> <td>gnometower-release.apk</td> <td>Quest version.<br />[ REQUIRES RUNNING gnomes.exe or gnomes-server.exe INSTANCE TO CONNECT TO ]</td></tr>
 <tr> <td>resources</td>              <td>Game assets. Run PCVR at the same folder heirarchy as this folder (should be fine to run from unzipped structure).</td> </tr>
 <tr> <td>save0</td>                  <td>World save file. Server saves world on close window.</td> </tr>
-<tr> <td>settings.txt</td>           <td>Game settings. Set "forceFrameSync 1" if using the oculus PCVR runtime.</td> </tr>
+<tr> <td>settings.txt</td>           <td>Game settings.</td> </tr>
 </table>
-
 <br />
 <br />
-Gnown Bugs:<br />
-- Oculus PC runtime requires forceFrameSync 1 (settings.txt)<br />
-- standalone server says "(Not Responding)" even though it is<br />
+-->
+Bugs:<br />
+- gnomes don't grab objects to build<br />
+- zones do nothing<br />
 <br />
 <br />
 ChangeLog:<br />
+<div class="changelog">
+<br />0.0.27:<br />
+- audio settings<br />
+- fixed job stealing<br />
+- bug fixes<br />
+<br />
+<br />0.0.26:<br />
+- audio<br />
+- scaffolding<br />
+- better previews<br />
+<br />
+<br />0.0.25:<br />
+- zone infrastructure<br />
+- quest bugs<br />
+- transitions<br />
+<br />
+<br />0.0.24:<br />
+- mainly testing build pipeline<br />
+<br />
+<br />0.0.23:<br />
+- bug fixes<br />
+- sun/moon<br />
+- fixed quest bugs<br />
+<br />
+<br />0.0.22:<br />
+- bug fixes<br />
+- objects<br />
+- everything grabbable<br />
+- throwabilityy<br />
+<br />
+<br />0.0.21:<br />
+- bug fixes<br />
+- network speed/stability<br />
+- building stability<br />
+<br />
+<br />0.0.20:<br />
+- low hanging fruit<br />
+<br />
+<br />0.0.19:<br />
+- tons of qol fixes<br />
+- more reliable chunk cache<br />
+- movement options in settings<br />
+- tunnel vision<br />
+- cleaner menu rendering<br />
+- dynamic water<br />
+- harvest masks<br />
+- bug fixes + perf gains<br />
+<br />
 <br />0.0.18:<br />
 - massive code reorg<br />
 - generalized edits into categories<br />
@@ -217,7 +266,10 @@ ChangeLog:<br />
 <br />0.0.1:<br />
 - multiplayer voxel editor<br />
 - hardcoded IP<br />
+</div> <!-- changelog -->
 
+</div> <!-- content -->
 </body>
 
 </html>
+
