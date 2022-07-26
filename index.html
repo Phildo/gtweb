@@ -4,26 +4,29 @@
 body
 {
   font-family:Arial;
+  background-color:#2E6227;
   background-image:url("assets/gnometower.png");
-  background-position: center;
+  background-position: center top;
   background-repeat: no-repeat;
   background-attachment: fixed;
 }
 .content
 {
   border-radius: 25px;
-  color:white;
-  background-color:rgba(0,0,0,0.6);
+  color:rgba(220,220,220,1.0);
+  background-color:rgba(0,0,0,0.8);
   padding:20px;
   margin:20px;
 }
 .changelog
 {
-  border-radius: 25px;
-  height: 440px;
-  padding:20px;
-  margin:20px;
-  background-color:rgba(0,0,0,0.6);
+  border-radius: 10px;
+  height: 240px;
+  padding:10px;
+  margin:0px;
+  margin-top:10px;
+  color:black;
+  background-color:rgba(255,255,255,0.6);
   overflow-y: auto;
 }
 a
@@ -36,10 +39,18 @@ tr,td
   padding:10px;
 }
 </style>
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<link rel="manifest" href="site.webmanifest">
+<link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
 </head>
 <body>
 <div class="content">
-<h1> Gnome Tower</h1>
+<span style="font-weight:bold; font-size:40px;">Gnome Tower</span>
+<br />
 <!--
 <a href="zips/gnometower-0.0.1.zip">Download 0.0.1 (Windows & Quest)</a> <br />
 <a href="zips/gnometower-0.0.2.zip">Download 0.0.2 (Windows & Quest)</a> <br />
@@ -67,24 +78,34 @@ tr,td
 <a href="zips/gnometower-0.0.24.zip">Download 0.0.24 (Windows & Quest)</a> <br />
 <a href="zips/gnometower-0.0.25.zip">Download 0.0.25 (Windows & Quest)</a> <br />
 <a href="zips/gnometower-0.0.26.zip">Download 0.0.26 (Windows & Quest)</a> <br />
+<a href="zips/gnometower-0.0.27.zip">Download 0.0.27 (Windows & Quest)</a> <br />
+<a href="zips/gnometower-0.0.28.zip">Download 0.0.28 (Windows & Quest)</a> <br />
+<a href="zips/gnometower-0.0.29.zip">Download 0.0.29 (Windows & Quest)</a> <br />
+<a href="zips/gnometower-0.0.30.zip">Download 0.0.30 (Windows & Quest)</a> <br />
+<a href="zips/gnometower-0.0.31.zip">Download 0.0.31 (Windows & Quest)</a> <br />
 -->
-<a href="zips/gnometower-0.0.27.zip">
+<br />
+Welcome to the <b>closed alpha</b> for Gnome Tower, the multiplayer VR voxel colony sim!<br />
+You should have only found this site through the #closed_alpha channel of our <a href="https://discord.gg/EhP4nvEeUc">Discord</a>.<br />
+
+<a href="zips/gnometower-0.0.31.zip">
 <img src="assets/gnome.png" style="height:100px;"/><br />
-Download 0.0.27 (Windows & Quest)
+Download 0.0.31 (Windows & Quest)
 </a> <br />
 <br />
-If it isn't already installed on your computer, you might need to additionally download the following MSVC++ redistributible:<br />
-<a href="https://support.microsoft.com/en-us/help/2977003/the-latest-supported-visual-c-downloads">MSVC++</a> (you'll likely need vc_redist.x64.exe)<br />
+If it isn't already installed on your computer, you might need to additionally download the following <a href="https://support.microsoft.com/en-us/help/2977003/the-latest-supported-visual-c-downloads">MSVC++ redistributible</a> (select vc_redist.x64.exe).<br />
 <!--
 Some redistributibles you might need to install (normally, Steam would take care of this for you):<br />
 <a href="https://support.microsoft.com/en-us/help/2977003/the-latest-supported-visual-c-downloads">MSVC++</a> (you'll likely need vc_redist.x64.exe)<br />
 <a href="http://openal.org/downloads/">OpenAL</a> (the Windows installer, not the SDK)<br />
 -->
-<br />
 <!--
 Check out our <a href="https://discord.gg/sKVrUPgw">Discord channel</a>.
 -->
 <br />
+<br />
+To <b>play solo</b> (Windows):<br />
+- Double click gnomes.exe!<br />
 <br />
 To <b>host a server</b> (Windows):<br />
 - Enable port forwarding on your router<br />
@@ -114,48 +135,68 @@ Download Contents:
 Bugs:<br />
 - gnomes don't grab objects to build<br />
 - zones do nothing<br />
+- quest2 build untested in latest version (0.0.31)<br />
 <br />
 <br />
 ChangeLog:<br />
 <div class="changelog">
-<br />0.0.27:<br />
+<!--
+0.0.X:<br />
+- X<br />
+-->
+0.0.31:<br />
+- fixed window resize command rendering bug<br />
+- fixed invisible grabs after moved long distances<br />
+- fixed lighting bug<br />
+<br />
+0.0.30:<br />
+- finally fixed command rendering order<br />
+- fixed resize window bug causing game to run very slowly<br />
+<br />
+0.0.29:<br />
+- player shadows toggleable<br />
+<br />
+0.0.28:<br />
+- gnomes retry builds after being moved<br />
+<br />
+0.0.27:<br />
 - audio settings<br />
 - fixed job stealing<br />
 - bug fixes<br />
 <br />
-<br />0.0.26:<br />
+0.0.26:<br />
 - audio<br />
 - scaffolding<br />
 - better previews<br />
 <br />
-<br />0.0.25:<br />
+0.0.25:<br />
 - zone infrastructure<br />
 - quest bugs<br />
 - transitions<br />
 <br />
-<br />0.0.24:<br />
+0.0.24:<br />
 - mainly testing build pipeline<br />
 <br />
-<br />0.0.23:<br />
+0.0.23:<br />
 - bug fixes<br />
 - sun/moon<br />
 - fixed quest bugs<br />
 <br />
-<br />0.0.22:<br />
+0.0.22:<br />
 - bug fixes<br />
 - objects<br />
 - everything grabbable<br />
 - throwabilityy<br />
 <br />
-<br />0.0.21:<br />
+0.0.21:<br />
 - bug fixes<br />
 - network speed/stability<br />
 - building stability<br />
 <br />
-<br />0.0.20:<br />
+0.0.20:<br />
 - low hanging fruit<br />
 <br />
-<br />0.0.19:<br />
+0.0.19:<br />
 - tons of qol fixes<br />
 - more reliable chunk cache<br />
 - movement options in settings<br />
@@ -165,7 +206,7 @@ ChangeLog:<br />
 - harvest masks<br />
 - bug fixes + perf gains<br />
 <br />
-<br />0.0.18:<br />
+0.0.18:<br />
 - massive code reorg<br />
 - generalized edits into categories<br />
 - menu overhaul<br />
@@ -173,43 +214,43 @@ ChangeLog:<br />
 - movement qols<br />
 - bug fixes + perf gains<br />
 <br />
-<br />0.0.17:<br />
+0.0.17:<br />
 - bug fixes<br />
 - big performance gains<br />
 - preparation for objs<br />
 <br />
-<br />0.0.16:<br />
+0.0.16:<br />
 - bug fixes<br />
 - bigger view distance<br />
 - mobs everywhere<br />
 <br />
-<br />0.0.15:<br />
+0.0.15:<br />
 - bug fixes<br />
 - procgen terrain<br />
 - clouds<br />
 - multiplayer heads<br />
 <br />
-<br />0.0.14:<br />
+0.0.14:<br />
 - bug fixes<br />
 - debugging infrastructure<br />
 - beginnings of procgen<br />
 <br />
-<br />0.0.13:<br />
+0.0.13:<br />
 - bug fixes<br />
 - debugging infrastructure<br />
 - working quest build<br />
 <br />
-<br />0.0.12:<br />
+0.0.12:<br />
 - scale modifier<br />
 - bug fixes<br />
 <br />
-<br />0.0.11:<br />
+0.0.11:<br />
 - significant performance increases<br />
 - stars<br />
 - debug tooling and longer term restructuring<br />
 - bug fixes<br />
 <br />
-<br />0.0.10:<br />
+0.0.10:<br />
 - rudimentary gnome building commands<br />
 - brush sizes<br />
 - realtime loading performance increases<br />
@@ -218,7 +259,7 @@ ChangeLog:<br />
 - significant world compression<br />
 - tons of minor changes<br />
 <br />
-<br />0.0.9:<br />
+0.0.9:<br />
 - Workaround for oculus PC runtime bug<br />
 - text file IP definition<br />
 - day/night cycle<br />
@@ -227,16 +268,16 @@ ChangeLog:<br />
 - gnome pathing<br />
 - included demo to allow camera control from keyboard/mouse (no interaction)<br />
 <br />
-<br />0.0.8:<br />
+0.0.8:<br />
 - quest catchup (openxr bugs remain)<br />
 - can pickup mobs<br />
 - visual fixes<br />
 <br />
-<br />0.0.7:<br />
+0.0.7:<br />
 - menu selection and images<br />
 - cleaner voxel visuals<br />
 <br />
-<br />0.0.6:<br />
+0.0.6:<br />
 - realtime voxel edits<br />
 - very basic menu system<br />
 - settings menu<br />
@@ -245,25 +286,29 @@ ChangeLog:<br />
 - ability to rotate on a pivot<br />
 - large performance gains<br />
 <br />
-<br />0.0.5:<br />
+0.0.5:<br />
 - fixes subtle driver bugs<br />
 - slight performance increase<br />
-<br />0.0.4:<br />
+<br />
+0.0.4:<br />
 - mobs! pigs birds and gnomes, oh my!<br />
 - grab and pull<br />
 - voxel preview<br />
 - HUGE performance gains<br />
 - small bugfixes<br />
-<br />0.0.3:<br />
+<br />
+0.0.3:<br />
 - fixes requirement for debug .dlls<br />
 - transparent voxels<br />
 - animated voxels<br />
 - selection reticle<br />
-<br />0.0.2:<br />
+<br />
+0.0.2:<br />
 - textured voxels<br />
 - chunk loading<br />
 - ip selector<br />
-<br />0.0.1:<br />
+<br />
+0.0.1:<br />
 - multiplayer voxel editor<br />
 - hardcoded IP<br />
 </div> <!-- changelog -->
