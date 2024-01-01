@@ -83,15 +83,19 @@ tr,td
 <a href="zips/gnometower-0.0.29.zip">Download 0.0.29 (Windows & Quest)</a> <br />
 <a href="zips/gnometower-0.0.30.zip">Download 0.0.30 (Windows & Quest)</a> <br />
 <a href="zips/gnometower-0.0.31.zip">Download 0.0.31 (Windows & Quest)</a> <br />
+<a href="zips/gnometower-0.0.32.zip">Download 0.0.32 (Windows)</a> <br />
+<a href="zips/gnometower-0.0.33.zip">Download 0.0.33 (Windows)</a> <br />
+<a href="zips/gnometower-0.0.34.zip">Download 0.0.34 (Windows)</a> <br />
 -->
 <br />
-Welcome to the <b>closed alpha</b> for Gnome Tower, the multiplayer VR voxel colony sim!<br />
-You should have only found this site through the #closed_alpha channel of our <a href="https://discord.gg/EhP4nvEeUc">Discord</a>.<br />
+Welcome to the <b>alpha</b> for Gnome Tower, the multiplayer VR voxel colony sim!<br />
+Join the <a href="https://discord.gg/EhP4nvEeUc">Discord</a>.<br />
 
-<a href="zips/gnometower-0.0.31.zip">
+<a href="zips/gnometower-0.0.34.zip">
 <img src="assets/gnome.png" style="height:100px;"/><br />
-Download 0.0.31 (Windows & Quest)
+Download 0.0.34 (Windows)
 </a> <br />
+Also available on <a href="https://phildo.itch.io/gnometower">Itch</a>.<br />
 <br />
 If it isn't already installed on your computer, you might need to additionally download the following <a href="https://support.microsoft.com/en-us/help/2977003/the-latest-supported-visual-c-downloads">MSVC++ redistributible</a> (select vc_redist.x64.exe).<br />
 <!--
@@ -132,10 +136,16 @@ Download Contents:
 <br />
 <br />
 -->
+<video controls autoplay style="width:100%">
+  <source src="assets/snippet.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+<br />
+<br />
 Bugs:<br />
 - gnomes don't grab objects to build<br />
 - zones do nothing<br />
-- quest2 build untested in latest version (0.0.31)<br />
+- quest2 build not included in latest version (0.0.34) (contact @phildo if you want to test!)<br />
 <br />
 <br />
 ChangeLog:<br />
@@ -144,6 +154,25 @@ ChangeLog:<br />
 0.0.X:<br />
 - X<br />
 -->
+0.0.34:<br />
+- fixed clear command stamp override<br />
+- doors can be walked through without exposing seams<br />
+- debug light parameters in-game<br />
+- fixed audio levels on change<br />
+- fixed crash when initial chunks unmodified<br />
+<br />
+0.0.33:<br />
+- faster terrain gen<br />
+- fixed fish spawning in the sky<br />
+- grab to set height forces grounding<br />
+<br />
+0.0.32:<br />
+- fixed z0 mobs on load<br />
+- players walk through movable blocks (scaffolding/etc)<br />
+- gnome perspective can't climb in air<br />
+- haze fog shader<br />
+- throws finish local calculation _then_ correct (looks less janky)<br />
+<br />
 0.0.31:<br />
 - fixed window resize command rendering bug<br />
 - fixed invisible grabs after moved long distances<br />
